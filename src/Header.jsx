@@ -14,7 +14,7 @@ const Header = ({ className }) => {
       {/* Left Side */}
       <div className='flex justify-between  items-center'>
         <Icon path={mdiMagnify} size={1} />
-        <div className='w-[50rem] h-8 ml-8 bg-slate-200  rounded-full'></div>
+        <div className='w-[45rem] h-8 ml-8 bg-slate-200  rounded-full'></div>
       </div>
 
       {/* Right Side */}
