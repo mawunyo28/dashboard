@@ -3,10 +3,15 @@ import { mdiMagnify } from "@mdi/js";
 import { mdiBellRingOutline } from "@mdi/js";
 import Button from './Button';
 import ProfilePic from './ProfilePic'
+import { useState } from "react";
 
 
 
 const Header = ({ className }) => {
+  const [inputValue, setInputValue] = useState('');
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  }
   return <div className={`shadow-md bg-white flex flex-col gap-10  px-8 py-4 ${className}`}>
 
     {/* Top */}
@@ -14,7 +19,7 @@ const Header = ({ className }) => {
       {/* Left Side */}
       <div className='flex justify-between  items-center'>
         <Icon path={mdiMagnify} size={1} />
-        <div className='w-[45rem] h-8 ml-8 bg-slate-200  rounded-full'></div>
+        <input className='w-[45rem] h-8 ml-8 bg-slate-200 px-5  rounded-full' type='text' value={inputValue} onChange={handleChange} />
       </div>
 
       {/* Right Side */}
